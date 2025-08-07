@@ -1,0 +1,43 @@
+.about-container {
+  padding: 4rem 2rem;
+  max-width: 900px;
+  margin: auto;
+  color: #ffffff;
+  background: linear-gradient(to right, #1f1c2c, #115462);
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.about-container .highlight {
+  color: #00d9ff;
+}
+
+.about-container h2 {
+  font-size: 2.3rem;
+  margin-bottom: 1rem;
+}
+
+.about-container p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+}
+
+.features-card {
+  background-color: #12151c;
+  padding: 1.5rem 2rem;
+  border-radius: 10px;
+  box-shadow: 0 0 8px #00d9ff33;
+}
+
+.features-card h3 {
+  margin-bottom: 1rem;
+  color: #00d9ff;
+}
+
+.features-card ul {
+  padding-left: 1.5rem;
+}
+
+.features-card li {
+  margin-bottom: 0.5rem;
+}

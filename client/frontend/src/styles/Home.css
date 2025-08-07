@@ -1,0 +1,85 @@
+.home-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 85vh;
+  padding: 3rem;
+  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+  color: #ffffff;
+}
+
+.home-content {
+  display: flex;
+  justify-content: space-between;
+  max-width: 1200px;
+  width: 100%;
+  gap: 3rem;
+}
+
+.home-description {
+  flex: 1;
+}
+
+.home-description h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.home-description .highlight {
+  color: #00d9ff;
+}
+
+.home-description p {
+  font-size: 1.2rem;
+  margin-bottom: 1.5rem;
+}
+
+.home-description ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.home-description ul li::before {
+  content: "• ";
+  color: #00d9ff;
+  font-weight: bold;
+  margin-right: 8px;
+}
+
+.home-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.btn {
+  padding: 0.8rem 2rem;
+  font-size: 1rem;
+  border: none;
+  border-radius: 10px;
+  transition: background 0.3s ease;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+}
+
+.primary {
+  background-color: #00d9ff;
+  color: #000;
+}
+
+.primary:hover {
+  background-color: #00b7d6;
+}
+
+.secondary {
+  background-color: transparent;
+  border: 2px solid #00d9ff;
+  color: #00d9ff;
+}
+
+.secondary:hover {
+  background-color: #00d9ff;
+  color: #000;
+}

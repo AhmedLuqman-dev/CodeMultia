@@ -1,0 +1,68 @@
+.create-room-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 85vh;
+  background: linear-gradient(to right, #1f1c2c, #115462);
+  color: #fff;
+  padding: 2rem;
+}
+
+.create-room-card {
+  background-color: rgba(27, 102, 102, 0.08);
+  padding: 2.5rem 3rem;
+  border-radius: 20px;
+  text-align: center;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(8px);
+  min-width: 350px;
+}
+
+.create-room-card h2 {
+  font-size: 1.8rem;
+  margin-bottom: 1.5rem;
+}
+
+.generate-btn {
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  background: radial-gradient(circle,rgba(238, 174, 202, 1) 0%, rgba(148, 187, 233, 1) 100%);
+  color: rgb(46, 57, 67);
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.3s ease;
+  font-weight: bold;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.3);
+}
+
+.generate-btn:hover {
+  opacity: 0.85;
+}
+
+.room-id-display {
+  margin-top: 1.2rem;
+  font-size: 1.1rem;
+  color: #ddd;
+}
+
+.room-input {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  font-size: 1rem;
+  border-radius: 8px;
+  border: none;
+  margin: 1rem 0;
+  background-color: #1c1c2e;
+  color: #fff;
+  outline: none;
+  transition: 0.3s ease;
+}
+
+.room-input::placeholder {
+  color: #aaa;
+}
+
+.room-input:focus {
+  background-color: #2c2c4c;
+}
