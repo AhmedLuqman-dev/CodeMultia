@@ -5,7 +5,9 @@ import Editor from "@monaco-editor/react";
 import "../styles/EditorPage.css";
 import { executeCode } from "../utils/judge0";
 
-const socket = io(import.meta.env.VITE_BACKEND_URL);
+const socket = io(import.meta.env.VITE_BACKEND_URL, {
+  transports: ["websocket"],
+})
 
 const EditorPage = () => {
   const { roomId } = useParams();
