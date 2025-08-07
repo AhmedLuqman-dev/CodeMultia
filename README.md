@@ -4,7 +4,7 @@ CodeMultia is a real-time collaborative coding platform where users can:
 - Write and share code together live
 - Choose between popular languages (Python, C++, Java, etc.)
 - Chat in a dedicated room
-- Execute code using Judge0 API
+- Execute code in live
 - Automatically sync code and language settings between users
 
 ---
@@ -18,11 +18,10 @@ CodeMultia is a real-time collaborative coding platform where users can:
 ## 🚀 Features
 
 - ✅ Real-time code collaboration via Socket.IO
-- ✅ Room-based collaboration (host can close the room)
+- ✅ Room-based collaboration
 - ✅ Language selection with instant sync
 - ✅ Judge0 API integration for multi-language code execution
 - ✅ Built-in chat system
-- ✅ Room-closing when host leaves
 
 ---
 
