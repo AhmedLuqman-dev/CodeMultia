@@ -1,4 +1,4 @@
-<h1 align="center">🚀 CodeMultia</h1>
+<h1 align="center">CodeMultia</h1>
 <p align="center">
 Real-time collaborative code editor with multi-language execution and integrated chat.
 </p>
