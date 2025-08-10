@@ -57,6 +57,12 @@ Built for developers, interview practice, coding competitions, and educational p
 
 ---
 
+## 📸 Preview
+
+![CodeMultia Preview](./img/preview.png)
+
+---
+
 ## 📄 License
 
 This project is licensed under the **MIT License** – you are free to use, modify, and distribute.
