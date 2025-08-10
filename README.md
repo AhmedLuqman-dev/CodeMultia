@@ -59,7 +59,7 @@ Built for developers, interview practice, coding competitions, and educational p
 
 ## 📸 Preview
 
-![CodeMultia Preview](./img/preview.png)
+![CodeMultia Preview](./codemultia/Home.png)
 
 ---
 
