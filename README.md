@@ -6,7 +6,8 @@ Real-time collaborative code editor with multi-language execution and integrated
 <p align="center">
 <a href="https://codemultia.vercel.app"><strong>🌐 Live Demo</strong></a> · 
 <a href="#-features">Features</a> · 
-<a href="#-tech-stack">Tech Stack</a> ·  
+<a href="#-tech-stack">Tech Stack</a> · 
+<a href="#-preview">Preview</a> ·
 <a href="#-license">License</a>
 </p>
 
