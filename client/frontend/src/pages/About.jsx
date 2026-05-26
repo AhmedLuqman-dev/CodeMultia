@@ -67,9 +67,9 @@ const About = () => {
         </div>
       </section>
 
-      <p className="about-credit">
+      <h5 className="about-credit">
         Created by <strong>Mohd Ahmed Luqman</strong>
-      </p>
+      </h5>
     </div>
   );
 };

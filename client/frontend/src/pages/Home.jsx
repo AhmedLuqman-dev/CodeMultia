@@ -28,7 +28,7 @@ const Home = () => {
         <div className="home-hero-copy">
           <span className="home-badge">Collaborative coding platform</span>
           <h1>
-            Build together in
+            Code together in
             <span className="home-title-accent"> real time</span>
           </h1>
           <p className="home-lead">
