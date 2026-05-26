@@ -1,73 +1,27 @@
-<h1 align="center">CodeMultia</h1>
-<p align="center">
+# CodeMultia
+
 Real-time collaborative code editor with multi-language execution and integrated chat.
-</p>
 
-<p align="center">
-<a href="https://codemultia.vercel.app"><strong>🌐 Live Demo</strong></a> · 
-<a href="#-features">Features</a> · 
-<a href="#-tech-stack">Tech Stack</a> · 
-<a href="#-preview">Preview</a> ·
-<a href="#-license">License</a>
-</p>
+[Live Demo](https://codemultia.vercel.app)
 
----
+**CodeMultia** is a real-time collaborative coding platform where multiple users can write, edit, and execute code together. It supports several programming languages, instant synchronization, and a built-in chat system.
 
-## 📌 Overview
+## Features
 
-**CodeMultia** is a high-performance, real-time collaborative coding platform that enables multiple users to write, edit, and execute code together instantly.  
-It supports multiple programming languages, instant synchronization, and a built-in chat system to enhance collaboration.
+- **Real-time code collaboration** – WebSockets (Socket.IO)
+- **Multi-language support** – Python, C++, Java, C, and JavaScript via Judge0
+- **Integrated chat** – Communicate in the same session
+- **Room-based sessions** – Isolated collaboration workspaces
+- **Modern UI** – Responsive layout with Monaco Editor
 
-Built for developers, interview practice, coding competitions, and educational purposes, CodeMultia provides a smooth, distraction-free coding experience with reliable real-time updates.
+## Tech Stack
 
----
+**Frontend:** React, Vite, Monaco Editor, Socket.IO Client
 
-## ✨ Features
+**Backend:** Node.js, Express, Socket.IO, Judge0 API
 
-- **Real-time Code Collaboration** – Instant updates using WebSockets (Socket.IO)
-- **Multi-Language Support** – Execute code in Python, C++, Java, C, and JavaScript via Judge0 API
-- **Integrated Chat** – Communicate without leaving the coding environment
-- **Room-based Sessions** – Collaborate in dedicated, isolated workspaces
-- **Modern UI** – Gradient backgrounds, responsive design, and clean layout
-- **Cloud Deployed** – Optimized for fast global access via Vercel and Render
+**Deployment:** Vercel (frontend), Render (backend)
 
----
+## License
 
-## 🛠 Tech Stack
-
-**Frontend**
-- React + Vite
-- Monaco Editor
-- Socket.IO Client
-- Pure CSS (Custom Styling)
-
-**Backend**
-- Node.js + Express
-- Socket.IO Server
-- Judge0 API Integration
-
-**Deployment**
-- Frontend: Vercel
-- Backend: Render
-
----
-
-## 🌍 Live Demo
-
-🔗 **[CodeMultia - Try it Now](https://codemultia.vercel.app)**
-
----
-
-## 📸 Preview
-
-![CodeMultia Preview](./codemultia/Home.png)
-
----
-
-## 📄 License
-
-This project is licensed under the **MIT License** – you are free to use, modify, and distribute.
-
----
-
-<p align="center">Made with ❤️ by MohdAhmedLuqman</p>
+MIT License – free to use, modify, and distribute.

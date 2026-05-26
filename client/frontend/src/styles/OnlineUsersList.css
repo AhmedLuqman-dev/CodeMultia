@@ -1,0 +1,180 @@
+.online-users {
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+}
+
+.online-users-header {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.online-users-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #28c840;
+  box-shadow: 0 0 10px rgba(40, 200, 64, 0.7);
+  flex-shrink: 0;
+}
+
+.online-users-title {
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: rgba(255, 255, 255, 0.55);
+}
+
+.online-users-count {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 1.35rem;
+  height: 1.35rem;
+  padding: 0 0.35rem;
+  font-size: 0.7rem;
+  font-weight: 700;
+  color: #041318;
+  background: linear-gradient(135deg, #00d9ff, #00b7d6);
+  border-radius: 999px;
+}
+
+.online-users-empty {
+  margin: 0;
+  padding: 0.75rem;
+  font-size: 0.8rem;
+  color: rgba(255, 255, 255, 0.4);
+  text-align: center;
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
+  border: 1px dashed rgba(255, 255, 255, 0.1);
+}
+
+.online-users-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  max-height: 220px;
+  overflow-y: auto;
+}
+
+.online-users-list::-webkit-scrollbar {
+  width: 4px;
+}
+
+.online-users-list::-webkit-scrollbar-thumb {
+  background: rgba(0, 217, 255, 0.35);
+  border-radius: 4px;
+}
+
+.online-user-card {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  padding: 0.55rem 0.65rem;
+  background: rgba(0, 0, 0, 0.22);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 10px;
+  transition: border-color 0.2s ease, background 0.2s ease;
+}
+
+.online-user-card:hover {
+  border-color: rgba(255, 255, 255, 0.16);
+}
+
+.online-user-card.is-you {
+  background: rgba(0, 217, 255, 0.08);
+  border-color: rgba(0, 217, 255, 0.35);
+}
+
+.online-user-avatar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2rem;
+  height: 2rem;
+  flex-shrink: 0;
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: #041318;
+  background: linear-gradient(135deg, #7ee8ff, #00d9ff);
+  border-radius: 50%;
+}
+
+.online-user-card.is-you .online-user-avatar {
+  background: linear-gradient(135deg, #00d9ff, #00b7d6);
+  box-shadow: 0 0 12px rgba(0, 217, 255, 0.4);
+}
+
+.online-user-info {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  flex-wrap: wrap;
+}
+
+.online-user-name {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.92);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.online-user-tag {
+  padding: 0.1rem 0.4rem;
+  font-size: 0.6rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: #00d9ff;
+  background: rgba(0, 217, 255, 0.15);
+  border-radius: 4px;
+}
+
+.online-user-status {
+  width: 7px;
+  height: 7px;
+  flex-shrink: 0;
+  border-radius: 50%;
+  background: #28c840;
+  box-shadow: 0 0 6px rgba(40, 200, 64, 0.8);
+}
+
+.online-users--compact .online-users-list {
+  flex-direction: row;
+  flex-wrap: wrap;
+  max-height: none;
+  gap: 0.4rem;
+}
+
+.online-users--compact .online-user-card {
+  flex: 0 1 auto;
+  padding: 0.35rem 0.5rem 0.35rem 0.35rem;
+}
+
+.online-users--compact .online-user-avatar {
+  width: 1.5rem;
+  height: 1.5rem;
+  font-size: 0.65rem;
+}
+
+.online-users--compact .online-user-status {
+  display: none;
+}
+
+.online-users--compact .online-user-info {
+  flex: 0 1 auto;
+}
+
+.online-users--compact .online-users-empty {
+  padding: 0.5rem;
+}

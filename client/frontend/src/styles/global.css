@@ -1,6 +1,6 @@
 body {
   margin: 0;
-  padding-top: 70px; 
+  padding-top: 72px; 
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
   color: #ffffff;
@@ -19,6 +19,38 @@ a:hover {
 
 * {
   box-sizing: border-box;
+}
+
+.app-page {
+  min-height: calc(100vh - 72px);
+  padding: 2.5rem 1.5rem 4rem;
+  background:
+    radial-gradient(ellipse 80% 50% at 20% -10%, rgba(0, 217, 255, 0.18), transparent 55%),
+    radial-gradient(ellipse 60% 40% at 90% 20%, rgba(0, 180, 216, 0.12), transparent 50%),
+    linear-gradient(160deg, #0a1218 0%, #0f2027 35%, #1a3340 70%, #0f2027 100%);
+  color: #fff;
+}
+
+.page-badge {
+  display: inline-block;
+  padding: 0.35rem 0.9rem;
+  margin-bottom: 1.25rem;
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: #00d9ff;
+  background: rgba(0, 217, 255, 0.1);
+  border: 1px solid rgba(0, 217, 255, 0.35);
+  border-radius: 999px;
+}
+
+.page-accent {
+  display: block;
+  background: linear-gradient(90deg, #00d9ff, #7ee8ff, #00b7d6);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
 }
 
 button {

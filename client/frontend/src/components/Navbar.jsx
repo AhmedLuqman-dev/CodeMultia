@@ -1,24 +1,87 @@
-import React from "react";
-import { Link } from "react-router-dom";
+import React, { useState, useEffect } from "react";
+import { Link, NavLink, useLocation } from "react-router-dom";
 import "../styles/Navbar.css";
 import logo from "../assets/logo.png";
 
+const navItems = [
+  { to: "/", label: "Home", end: true },
+  { to: "/join", label: "Join Room" },
+  { to: "/about", label: "About" },
+];
+
 const Navbar = () => {
+  const [menuOpen, setMenuOpen] = useState(false);
+  const location = useLocation();
+
+  useEffect(() => {
+    setMenuOpen(false);
+  }, [location.pathname]);
+
+  useEffect(() => {
+    document.body.style.overflow = menuOpen ? "hidden" : "";
+    return () => {
+      document.body.style.overflow = "";
+    };
+  }, [menuOpen]);
+
   return (
-    <nav className="navbar">
-      <div className="navbar-logo">
-        <Link to="/" className="brand-link">
-          <img src={logo} alt="CodeMultia Logo" className="brand-icon" />
-          CodeMultia
+    <header className="navbar">
+      <div className="navbar-inner">
+        <Link to="/" className="navbar-brand">
+          <img src={logo} alt="" className="navbar-logo-img" />
+          <span className="navbar-brand-text">
+            Code<span className="navbar-brand-accent">Multia</span>
+          </span>
         </Link>
+
+        <button
+          type="button"
+          className={`navbar-toggle ${menuOpen ? "is-open" : ""}`}
+          aria-label={menuOpen ? "Close menu" : "Open menu"}
+          aria-expanded={menuOpen}
+          onClick={() => setMenuOpen((open) => !open)}
+        >
+          <span />
+          <span />
+          <span />
+        </button>
+
+        <nav
+          className={`navbar-menu ${menuOpen ? "is-open" : ""}`}
+          aria-label="Main navigation"
+        >
+          <ul className="navbar-links">
+            {navItems.map(({ to, label, end }) => (
+              <li key={to}>
+                <NavLink
+                  to={to}
+                  end={end}
+                  className={({ isActive }) =>
+                    `navbar-link${isActive ? " is-active" : ""}`
+                  }
+                >
+                  {label}
+                </NavLink>
+              </li>
+            ))}
+          </ul>
+          <div className="navbar-actions">
+            <Link to="/create" className="navbar-cta">
+              Create Room
+            </Link>
+          </div>
+        </nav>
       </div>
-      <ul className="navbar-links">
-        <li><Link to="/">Home</Link></li>
-        <li><Link to="/join">Join Room</Link></li>
-        <li><Link to="/create">Create Room</Link></li>
-        <li><Link to="/about">About</Link></li>
-      </ul>
-    </nav>
+
+      {menuOpen && (
+        <button
+          type="button"
+          className="navbar-backdrop"
+          aria-label="Close menu"
+          onClick={() => setMenuOpen(false)}
+        />
+      )}
+    </header>
   );
 };
 

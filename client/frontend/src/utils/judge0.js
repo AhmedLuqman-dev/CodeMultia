@@ -7,24 +7,34 @@ const languageMap = {
 };
 
 export const executeCode = async (code, language) => {
-  const encoded = btoa(code);
   const langId = languageMap[language] || 71;
+  const base = import.meta.env.VITE_BACKEND_URL;
+  const url = `${base.replace(/\/$/, "")}/api/execute`;
 
-  const response = await fetch(import.meta.env.VITE_JUDGE0_API, {
+  const response = await fetch(url, {
     method: "POST",
-    headers: {
-      "content-type": "application/json",
-      "X-RapidAPI-Key": import.meta.env.VITE_JUDGE0_API_KEY,
-      "X-RapidAPI-Host": "judge0-ce.p.rapidapi.com",
-    },
-    body: JSON.stringify({
-      source_code: encoded,
-      language_id: langId,
-    }),
+    headers: { "content-type": "application/json" },
+    body: JSON.stringify({ source_code: code, language_id: langId }),
   });
 
-  const data = await response.json();
-  if (data.stderr) return atob(data.stderr);
-  if (data.compile_output) return atob(data.compile_output);
-  return atob(data.stdout || "No output");
+  const text = await response.text();
+
+  if (!response.ok) {
+    try {
+      const parsed = JSON.parse(text || "{}");
+      const message = parsed?.error || parsed?.details || parsed?.message || "Execution failed";
+      throw new Error(message);
+    } catch (e) {
+      const message = text || `${response.status} ${response.statusText}`;
+      throw new Error(message);
+    }
+  }
+  if (!text) return "No output";
+
+  try {
+    const data = JSON.parse(text);
+    return data.output || "No output";
+  } catch (e) {
+    return text;
+  }
 };
