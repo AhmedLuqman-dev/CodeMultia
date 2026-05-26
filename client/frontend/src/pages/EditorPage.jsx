@@ -243,7 +243,7 @@ const EditorPage = () => {
             <pre className="editor-output-body">
               {isRunning && !output
                 ? "Executing…"
-                : output || "Click Run to execute your code. Everyone in the room will see the result."}
+                : output || "Click 'Run' to execute your code......"}
             </pre>
           </div>
         </main>
